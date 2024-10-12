@@ -1,0 +1,12 @@
+
+
+services:
+  borrame-node:
+    build: .
+    env_file: ./.env
+    ports:
+      - 3030:3030
+    environment:
+      - PORT=3030
+      - URL_DB=$URL_DB_ENV
+    restart: always
